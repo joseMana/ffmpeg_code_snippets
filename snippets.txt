@@ -12,6 +12,10 @@ ffmpeg -ss 551 -t 113 -i input_video.mp4 -y -c copy output_video.mp4
 change fps
 ffmpeg -i input_video.mp4 -r 25 output_video.mp4
 
-rotate
+rotate clockwise a video
 ffmpeg -i input.mp4 -vf "transpose=1" -c:a copy output.mp4
+
+rotate counter-clockwise a video
+ffmpeg -i input.mp4 -vf "transpose=2" -c:a copy output.mp4
+
 */
