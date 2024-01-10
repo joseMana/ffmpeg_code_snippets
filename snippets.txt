@@ -18,4 +18,11 @@ ffmpeg -i input.mp4 -vf "transpose=1" -c:a copy output.mp4
 rotate counter-clockwise a video
 ffmpeg -i input.mp4 -vf "transpose=2" -c:a copy output.mp4
 
+append/concat videos
+*txt file content*
+...
+file 'video1.mp4'
+file 'video2.mp4'
+...
+ffmpeg -f concat -i input.txt -c copy output.mp4
 */
