@@ -31,4 +31,8 @@ file 'video1.mp4'
 file 'video2.mp4'
 ...
 ffmpeg -f concat -i input.txt -c copy output.mp4
+
+MOV to MP4(preserving quality)
+ffmpeg -i input.mov -c:v libx264 -preset slow -crf 22 -c:a aac -b:a 128k output.mp4
+
 */
