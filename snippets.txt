@@ -9,6 +9,9 @@ ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate -of defau
 trim video
 ffmpeg -ss 551 -t 113 -i input_video.mp4 -y -c copy output_video.mp4
 
+trim video(retained and ensure quality)
+ffmpeg -i input_video.mp4 -ss 00:01:00 -to 00:02:30 -c:v libx264 -crf 18 -preset slow -c:a copy output_video.mp4
+
 change fps
 ffmpeg -i input_video.mp4 -r 25 output_video.mp4
 
