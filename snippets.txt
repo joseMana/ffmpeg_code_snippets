@@ -21,6 +21,9 @@ ffmpeg -i input.mp4 -vf "transpose=1" -c:a copy output.mp4
 rotate counter-clockwise a video
 ffmpeg -i input.mp4 -vf "transpose=2" -c:a copy output.mp4
 
+flip vertical
+ffmpeg -i input_video.mp4 -vf "vflip" -c:a copy output_video.mp4
+
 images to video with 1 fps
 ffmpeg -framerate 1 -pattern_type glob -i '*.jpg' -c:v libx264 -pix_fmt yuv420p output.mp4
 
